@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Email Signature — Boxhaven Self Storage (sample)</title>
+<meta name="description" content="Sample project by WebLivo: a responsive, table-based HTML email signature that works in Gmail, Outlook and Apple Mail.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --bg: #eef0f4;
+        --panel: #ffffff;
+        --ink: #172033;
+        --soft: #5d6578;
+        --line: #dfe3ea;
+        --navy: #1b2b4b;
+        --amber: #f2a33a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+
+    .wrap { max-width: 980px; margin: 0 auto; padding: 48px 20px 64px; }
+
+    .tag {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--navy);
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 12px;
+    }
+    h1 {
+        font-size: clamp(30px, 5vw, 46px);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        margin: 16px 0 12px;
+    }
+    .lead { color: var(--soft); max-width: 60ch; font-size: 17px; }
+
+    .clients {
+        display: flex; flex-wrap: wrap; gap: 8px;
+        margin-top: 18px;
+    }
+    .clients span {
+        font-size: 13px; font-weight: 600;
+        background: #e3f3e8; color: #1d6b3a;
+        border-radius: 6px; padding: 3px 10px;
+    }
+
+    /* ---- Mock email window ---- */
+    .mail {
+        margin-top: 36px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 24px 50px -30px rgba(23, 32, 51, 0.35);
+    }
+    .mail-bar {
+        display: flex; align-items: center; gap: 7px;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--line);
+        background: #f7f8fa;
+    }
+    .mail-bar i { width: 11px; height: 11px; border-radius: 50%; background: #d5d9e1; display: block; }
+    .mail-head { padding: 18px 24px 4px; font-size: 14px; color: var(--soft); }
+    .mail-head p { padding: 3px 0; }
+    .mail-head b { color: var(--ink); font-weight: 600; }
+    .mail-body { padding: 18px 24px 30px; }
+    .mail-body > p { margin-bottom: 14px; font-size: 15px; }
+
+    /* ---- Actions ---- */
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .btn {
+        font: inherit; font-weight: 600; font-size: 15px;
+        border: 0; cursor: pointer;
+        padding: 12px 22px; border-radius: 10px;
+        transition: transform 0.12s, background 0.15s;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-main { background: var(--navy); color: #fff; }
+    .btn-main:hover { background: #24395f; }
+    .btn-alt { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+    .btn-alt:hover { border-color: #b9c0cc; }
+    .btn:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+    .status { align-self: center; font-size: 14px; font-weight: 600; color: #1d6b3a; min-height: 1.4em; }
+
+    pre {
+        display: none;
+        margin-top: 16px;
+        background: #0f1626; color: #d6deeb;
+        border-radius: 12px;
+        padding: 18px;
+        font-size: 12.5px; line-height: 1.55;
+        overflow: auto; max-height: 420px;
+        white-space: pre-wrap; word-break: break-all;
+    }
+    pre.open { display: block; }
+
+    /* ---- Notes ---- */
+    .notes {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+        margin-top: 48px;
+    }
+    .notes h2 { font-size: 19px; margin-bottom: 10px; }
+    .notes ul, .notes ol { padding-left: 20px; color: var(--soft); }
+    .notes li { margin-bottom: 6px; }
+
+    .foot {
+        margin-top: 56px; padding-top: 20px;
+        border-top: 1px solid var(--line);
+        display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;
+        font-size: 14px; color: var(--soft);
+    }
+    .foot a { font-weight: 600; color: var(--navy); }
+
+    @media (max-width: 700px) {
+        .notes { grid-template-columns: 1fr; }
+        .mail-head, .mail-body { padding-left: 16px; padding-right: 16px; }
+    }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+    <span class="tag">Sample project · fictional company</span>
+    <h1>HTML email signature<br>for a self-storage brand</h1>
+    <p class="lead">A clean, professional signature built the way email needs it: table layout and inline styles, so it looks right in every inbox — desktop and mobile.</p>
+    <div class="clients">
+        <span>✓ Gmail</span><span>✓ Outlook</span><span>✓ Apple Mail</span><span>✓ Mobile</span>
+    </div>
+
+    <!-- Mock email -->
+    <div class="mail">
+        <div class="mail-bar"><i></i><i></i><i></i></div>
+        <div class="mail-head">
+            <p><b>From:</b> Sarah Mitchell</p>
+            <p><b>Subject:</b> Your storage unit is ready</p>
+        </div>
+        <div class="mail-body">
+            <p>Hi James,</p>
+            <p>Good news — your 50 sq ft unit is ready from Monday. Your access code will arrive by text the morning you move in.</p>
+            <p>Kind regards,</p>
+
+            <!-- ================= SIGNATURE START ================= -->
+            <div id="signature">
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width:100%;max-width:520px;font-family:Arial,Helvetica,sans-serif;color:#1b2b4b;border-collapse:collapse;">
+  <tr>
+    <td style="padding:0 18px 0 0;vertical-align:top;width:72px;">
+      <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;">
+        <tr>
+          <td width="72" height="72" align="center" valign="middle" style="width:72px;height:72px;background:#1b2b4b;border-radius:16px;font-family:Arial,Helvetica,sans-serif;font-size:34px;line-height:72px;font-weight:bold;color:#f2a33a;">B</td>
+        </tr>
+      </table>
+    </td>
+    <td style="padding:0 0 0 18px;vertical-align:top;border-left:2px solid #f2a33a;">
+      <p style="margin:0;font-size:17px;line-height:22px;font-weight:bold;color:#1b2b4b;">Sarah Mitchell</p>
+      <p style="margin:2px 0 0;font-size:13px;line-height:18px;color:#5d6578;">Facility Manager · <span style="color:#1b2b4b;font-weight:bold;">Boxhaven Self Storage</span></p>
+      <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin-top:10px;border-collapse:collapse;font-size:13px;line-height:20px;">
+        <tr><td style="padding:0 8px 0 0;color:#f2a33a;font-weight:bold;">T</td><td><a href="tel:+442079460123" style="color:#1b2b4b;text-decoration:none;">+44 20 7946 0123</a></td></tr>
+        <tr><td style="padding:0 8px 0 0;color:#f2a33a;font-weight:bold;">E</td><td><a href="mailto:sarah@boxhaven.example" style="color:#1b2b4b;text-decoration:none;">sarah@boxhaven.example</a></td></tr>
+        <tr><td style="padding:0 8px 0 0;color:#f2a33a;font-weight:bold;">W</td><td><a href="https://boxhaven.example" style="color:#1b2b4b;text-decoration:none;">boxhaven.example</a></td></tr>
+        <tr><td style="padding:0 8px 0 0;color:#f2a33a;font-weight:bold;">A</td><td style="color:#5d6578;">Unit 4, Riverside Park, Leeds</td></tr>
+      </table>
+      <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin-top:12px;border-collapse:collapse;">
+        <tr>
+          <td style="padding:0 6px 0 0;"><a href="https://www.linkedin.com/" style="display:inline-block;background:#1b2b4b;color:#ffffff;font-size:12px;line-height:16px;font-weight:bold;text-decoration:none;padding:4px 10px;border-radius:12px;">LinkedIn</a></td>
+          <td style="padding:0 6px 0 0;"><a href="https://www.facebook.com/" style="display:inline-block;background:#1b2b4b;color:#ffffff;font-size:12px;line-height:16px;font-weight:bold;text-decoration:none;padding:4px 10px;border-radius:12px;">Facebook</a></td>
+          <td style="padding:0;"><a href="https://www.instagram.com/" style="display:inline-block;background:#1b2b4b;color:#ffffff;font-size:12px;line-height:16px;font-weight:bold;text-decoration:none;padding:4px 10px;border-radius:12px;">Instagram</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding:16px 0 0;">
+      <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width:100%;border-collapse:collapse;background:#1b2b4b;border-radius:8px;">
+        <tr>
+          <td style="padding:12px 16px;font-size:13px;line-height:18px;color:#ffffff;">
+            <span style="color:#f2a33a;font-weight:bold;">Moving soon?</span> Get your first month 50% off.
+          </td>
+          <td align="right" style="padding:10px 14px 10px 0;">
+            <a href="https://boxhaven.example/book" style="display:inline-block;background:#f2a33a;color:#1b2b4b;font-size:13px;font-weight:bold;text-decoration:none;padding:7px 14px;border-radius:6px;white-space:nowrap;">Book a unit</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding:10px 0 0;font-size:11px;line-height:15px;color:#8a91a1;">
+      Secure 24/7 access · CCTV-monitored · Climate-controlled units. Please consider the environment before printing this email.
+    </td>
+  </tr>
+</table>
+            </div>
+            <!-- ================= SIGNATURE END ================= -->
+        </div>
+    </div>
+
+    <div class="actions">
+        <button class="btn btn-main" id="copy">Copy signature</button>
+        <button class="btn btn-alt" id="code" aria-expanded="false" aria-controls="codebox">View HTML code</button>
+        <button class="btn btn-alt" id="download">Download .html</button>
+        <span class="status" id="status" role="status" aria-live="polite"></span>
+    </div>
+    <pre id="codebox"></pre>
+
+    <div class="notes">
+        <div>
+            <h2>How it's built</h2>
+            <ul>
+                <li>Table-based layout with inline CSS — the reliable approach for email clients</li>
+                <li>Image-free design: nothing gets blocked, no broken images, better deliverability</li>
+                <li>"Bulletproof" call-to-action button that renders without images</li>
+                <li>Clickable phone, email, website and social links</li>
+                <li>Max width 520px, readable on phones</li>
+            </ul>
+        </div>
+        <div>
+            <h2>How to install</h2>
+            <ol>
+                <li>Click <b>Copy signature</b></li>
+                <li><b>Gmail:</b> Settings → See all settings → Signature → paste</li>
+                <li><b>Outlook:</b> Settings → Mail → Compose and reply → paste</li>
+                <li><b>Apple Mail:</b> Settings → Signatures → paste (untick "Always match my default font")</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="foot">
+        <span>Sample work — Boxhaven is a fictional company. Built by WebLivo.</span>
+        <a href="/">← Back to WebLivo</a>
+    </div>
+</div>
+
+<script>
+    const sig = document.getElementById("signature");
+    const status = document.getElementById("status");
+    const codebox = document.getElementById("codebox");
+    const codeBtn = document.getElementById("code");
+
+    const sigHTML = () => sig.innerHTML.trim();
+
+    function say(msg) {
+        status.textContent = msg;
+        clearTimeout(say.t);
+        say.t = setTimeout(() => (status.textContent = ""), 2600);
+    }
+
+    // Copy as rich HTML so it pastes as a formatted signature.
+    document.getElementById("copy").addEventListener("click", async () => {
+        try {
+            const html = new Blob([sigHTML()], { type: "text/html" });
+            const text = new Blob([sig.innerText], { type: "text/plain" });
+            await navigator.clipboard.write([new ClipboardItem({ "text/html": html, "text/plain": text })]);
+            say("Copied — paste it into your email settings");
+        } catch (e) {
+            // Fallback: select the rendered signature and copy it.
+            const range = document.createRange();
+            range.selectNodeContents(sig);
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+            const ok = document.execCommand("copy");
+            sel.removeAllRanges();
+            say(ok ? "Copied — paste it into your email settings" : "Press Ctrl+C to copy the selection");
+        }
+    });
+
+    codeBtn.addEventListener("click", () => {
+        if (!codebox.textContent) codebox.textContent = sigHTML();
+        const open = codebox.classList.toggle("open");
+        codeBtn.textContent = open ? "Hide HTML code" : "View HTML code";
+        codeBtn.setAttribute("aria-expanded", open);
+    });
+
+    document.getElementById("download").addEventListener("click", () => {
+        const doc = '<!DOCTYPE html>\n<html><head><meta charset="UTF-8"><title>Boxhaven email signature</title></head><body>\n'
+            + sigHTML() + '\n</body></html>\n';
+        const url = URL.createObjectURL(new Blob([doc], { type: "text/html" }));
+        const a = Object.assign(document.createElement("a"), { href: url, download: "boxhaven-signature.html" });
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+        say("Downloaded boxhaven-signature.html");
+    });
+</script>
+</body>
+</html>

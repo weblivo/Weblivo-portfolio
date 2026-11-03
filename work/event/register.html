@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get tickets — Forma 27, Lisbon</title>
+<meta name="description" content="Register for Forma 27, the design and technology conference in Lisbon, 22–23 April 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-logo" viewBox="0 0 24 24" fill="#0b0b1a"><path d="M5 4h14v4H9v3h8v4H9v5H5z"/></symbol>
+</svg>
+
+<header class="nav-bar scrolled">
+    <a href="index.html" class="brand" aria-label="Forma 27 home"><span class="brand-mark"><svg><use href="#i-logo"/></svg></span>Forma 27</a>
+    <a href="index.html" class="btn btn-ghost btn-sm"><svg aria-hidden="true" style="transform:none"><use href="#i-back"/></svg>Back to event</a>
+</header>
+
+<main class="reg">
+    <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+    <div class="wrap">
+        <div id="flow">
+            <span class="eyebrow">Registration</span>
+            <h2>Get your ticket</h2>
+
+            <div class="reg-layout">
+                <form class="panel" id="regForm" novalidate>
+                    <div class="steps" aria-hidden="true">
+                        <div class="step-dot current" data-step="1"><div class="bar"><i></i></div><small>1 · Ticket</small></div>
+                        <div class="step-dot" data-step="2"><div class="bar"><i></i></div><small>2 · Details</small></div>
+                        <div class="step-dot" data-step="3"><div class="bar"><i></i></div><small>3 · Confirm</small></div>
+                    </div>
+                    <p class="sr-only" id="stepStatus" aria-live="polite">Step 1 of 3: choose a ticket</p>
+
+                    <!-- STEP 1 -->
+                    <section class="step" data-step="1">
+                        <h2>Choose a ticket</h2>
+                        <p>You can change this until the event. Early-bird prices end 31 January 2027.</p>
+                        <div class="ticket-opts" role="radiogroup" aria-label="Ticket type">
+                            <div class="opt">
+                                <input type="radio" name="tier" id="tier-online" value="online" data-name="Online" data-price="49">
+                                <label for="tier-online"><span class="opt-main"><span class="radio" aria-hidden="true"></span><span><strong>Online</strong><span>Live stream + 12 months of recordings</span></span></span><span class="opt-price">€49</span></label>
+                            </div>
+                            <div class="opt">
+                                <input type="radio" name="tier" id="tier-standard" value="standard" data-name="Standard" data-price="290" checked>
+                                <label for="tier-standard"><span class="opt-main"><span class="radio" aria-hidden="true"></span><span><strong>Standard</strong><span>Both days, one workshop, lunch &amp; party</span></span></span><span class="opt-price">€290</span></label>
+                            </div>
+                            <div class="opt">
+                                <input type="radio" name="tier" id="tier-vip" value="vip" data-name="VIP" data-price="590">
+                                <label for="tier-vip"><span class="opt-main"><span class="radio" aria-hidden="true"></span><span><strong>VIP</strong><span>Both workshops, front row, speakers' dinner</span></span></span><span class="opt-price">€590</span></label>
+                            </div>
+                        </div>
+                        <div class="field" id="wsField">
+                            <label for="workshop">Workshop <span>(Standard includes one)</span></label>
+                            <select id="workshop" name="workshop">
+                                <option>Prototyping motion in the browser · Day 1</option>
+                                <option>Motion that explains, not decorates · Day 2</option>
+                            </select>
+                        </div>
+                        <div class="step-actions">
+                            <span></span>
+                            <button type="button" class="btn btn-primary" data-next>Continue <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                        </div>
+                    </section>
+
+                    <!-- STEP 2 -->
+                    <section class="step" data-step="2" hidden>
+                        <h2>Your details</h2>
+                        <p>This is how your name will appear on your badge.</p>
+                        <div class="row2">
+                            <div class="field">
+                                <label for="first">First name</label>
+                                <input id="first" name="first" autocomplete="given-name" required>
+                                <p class="err" id="first-err"></p>
+                            </div>
+                            <div class="field">
+                                <label for="last">Last name</label>
+                                <input id="last" name="last" autocomplete="family-name" required>
+                                <p class="err" id="last-err"></p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="email">Work email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+                            <p class="err" id="email-err"></p>
+                        </div>
+                        <div class="row2">
+                            <div class="field">
+                                <label for="role">Role <span>(optional)</span></label>
+                                <input id="role" name="role" autocomplete="organization-title" placeholder="e.g. Product designer">
+                            </div>
+                            <div class="field">
+                                <label for="company">Company <span>(optional)</span></label>
+                                <input id="company" name="company" autocomplete="organization">
+                            </div>
+                        </div>
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-ghost" data-back><svg aria-hidden="true" style="transform:none"><use href="#i-back"/></svg>Back</button>
+                            <button type="button" class="btn btn-primary" data-next>Review order <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                        </div>
+                    </section>
+
+                    <!-- STEP 3 -->
+                    <section class="step" data-step="3" hidden>
+                        <h2>Check and confirm</h2>
+                        <p>We'll email your ticket and a secure payment link.</p>
+                        <dl class="review">
+                            <div><dt>Name</dt><dd id="r-name"></dd></div>
+                            <div><dt>Email</dt><dd id="r-email"></dd></div>
+                            <div><dt>Ticket</dt><dd id="r-tier"></dd></div>
+                            <div><dt>Workshop</dt><dd id="r-ws"></dd></div>
+                            <div><dt>Total</dt><dd id="r-total"></dd></div>
+                        </dl>
+                        <label class="consent"><input type="checkbox" id="terms"> I agree to the code of conduct and refund policy</label>
+                        <p class="err" id="terms-err"></p>
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-ghost" data-back><svg aria-hidden="true" style="transform:none"><use href="#i-back"/></svg>Back</button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">Confirm registration</button>
+                        </div>
+                    </section>
+                </form>
+
+                <aside class="panel order" aria-label="Order summary">
+                    <h3>Order summary</h3>
+                    <p class="o-name" id="o-name">Standard pass</p>
+                    <dl>
+                        <div><dt>Dates</dt><dd>22–23 April 2027</dd></div>
+                        <div><dt>Venue</dt><dd>Pier Hall 7, Lisbon</dd></div>
+                        <div id="o-ws-row"><dt>Workshops</dt><dd id="o-ws">1 included</dd></div>
+                        <div class="o-total"><dt>Total</dt><dd id="o-total">€290</dd></div>
+                    </dl>
+                    <p class="secure"><svg aria-hidden="true"><use href="#i-lock"/></svg>Free cancellation until 1 March 2027</p>
+                </aside>
+            </div>
+        </div>
+
+        <!-- SUCCESS -->
+        <div class="success" id="success" hidden tabindex="-1">
+            <div class="check"><svg aria-hidden="true"><use href="#i-check"/></svg></div>
+            <h2>You're in, <span id="s-first"></span>.</h2>
+            <p>We've sent your ticket to <strong id="s-email"></strong>. See you in Lisbon.</p>
+            <div class="pass-card">
+                <div class="pass-main">
+                    <small>Forma 27 · Design × Technology</small>
+                    <p class="p-name" id="s-name"></p>
+                    <div class="pass-grid">
+                        <div><small>Pass</small><strong id="s-tier"></strong></div>
+                        <div><small>Dates</small><strong>22–23 Apr 2027</strong></div>
+                        <div><small>Venue</small><strong>Pier Hall 7</strong></div>
+                        <div><small>Workshop</small><strong id="s-ws"></strong></div>
+                    </div>
+                </div>
+                <div class="pass-code">
+                    <svg id="code" viewBox="0 0 21 21" shape-rendering="crispEdges" role="img" aria-label="Ticket code"></svg>
+                    <span id="s-code"></span>
+                </div>
+            </div>
+            <div class="hero-actions" style="justify-content:center;margin-top:28px">
+                <a href="index.html#schedule" class="btn btn-ghost">View schedule</a>
+                <a href="index.html" class="btn btn-primary">Back to event <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="wrap foot">
+    <span>Sample project — Forma 27 is a fictional event; this form doesn't send data anywhere. Built by WebLivo.</span>
+    <a href="index.html">← Back to Forma 27</a>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

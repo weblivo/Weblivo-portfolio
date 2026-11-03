@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forma 27 — Design × Technology Conference, Lisbon</title>
+<meta name="description" content="Forma 27 is a two-day conference for designers and engineers building the next generation of digital products. 22–23 April 2027, Lisbon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- SVG icon sprite (Lucide-style, 24px grid) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
+    <symbol id="i-train" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l-2-3M15 21l2-3"/><circle cx="9" cy="14" r="0.6" fill="currentColor"/><circle cx="15" cy="14" r="0.6" fill="currentColor"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 13.5L3 11l1.5-1.5 7.5 1 4.5-4.5a2.1 2.1 0 0 1 3 3L15 13.5l1 7.5-1.5 1.5-2.5-7.5-3 3V21l-1.5 1-1-3.5L3 17.5l1-1.5h2.5z"/></symbol>
+    <symbol id="i-access" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M12 15l-3.5 6M12 15l3.5 6"/></symbol>
+    <symbol id="i-logo" viewBox="0 0 24 24" fill="#0b0b1a"><path d="M5 4h14v4H9v3h8v4H9v5H5z"/></symbol>
+</svg>
+
+<header class="nav-bar" id="navbar">
+    <a href="#top" class="brand" aria-label="Forma 27 home"><span class="brand-mark"><svg><use href="#i-logo"/></svg></span>Forma 27</a>
+    <nav class="links" id="links" aria-label="Main">
+        <a href="#speakers">Speakers</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#tickets">Tickets</a>
+        <a href="#venue">Venue</a>
+        <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+        <a href="register.html" class="btn btn-primary btn-sm" aria-label="Get tickets"><span class="nav-cta-text">Get tickets</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="links" aria-label="Open menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+</header>
+
+<main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+        <div class="grid-bg" aria-hidden="true"></div>
+        <div class="wrap">
+            <a href="#tickets" class="pill reveal-hero"><b>Early bird</b> Save €100 until 31 January</a>
+            <h1>
+                <span class="line"><span>Where design</span></span>
+                <span class="line"><span>meets <span class="grad-text">what's next</span></span></span>
+            </h1>
+            <p class="hero-sub reveal-hero">Two days with the designers and engineers shaping the next generation of digital products. 32 talks, 12 hands-on workshops, one riverside venue.</p>
+            <div class="hero-actions reveal-hero">
+                <a href="register.html" class="btn btn-primary btn-lg">Get your ticket <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a href="#schedule" class="btn btn-ghost btn-lg">View schedule</a>
+            </div>
+            <div class="hero-foot reveal-hero">
+                <div class="meta-card"><svg aria-hidden="true"><use href="#i-cal"/></svg><div><small>Date</small><strong>22–23 April 2027</strong></div></div>
+                <div class="meta-card"><svg aria-hidden="true"><use href="#i-pin"/></svg><div><small>Venue</small><strong>Pier Hall 7, Lisbon</strong></div></div>
+                <div class="countdown" role="timer" aria-label="Time until Forma 27 opens on 22 April 2027 at 09:00 Lisbon time">
+                    <div class="cd-unit"><strong id="cd-d">--</strong><small>days</small></div><span class="cd-sep" aria-hidden="true">:</span>
+                    <div class="cd-unit"><strong id="cd-h">--</strong><small>hours</small></div><span class="cd-sep" aria-hidden="true">:</span>
+                    <div class="cd-unit"><strong id="cd-m">--</strong><small>min</small></div><span class="cd-sep" aria-hidden="true">:</span>
+                    <div class="cd-unit"><strong id="cd-s">--</strong><small>sec</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <div class="partners">
+        <div class="wrap">
+            <p>Speakers and partners from teams at</p>
+            <div class="logo-row">
+                <span>Northlane</span><span>Fieldnote</span><span>Parcel</span><span>Kiln</span><span>Halcyon</span><span>Orbit</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT + STATS -->
+    <section class="sec" id="about">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <span class="eyebrow">About</span>
+                <h2>Less talking about the future. More building it.</h2>
+                <p>Forma is a single-track conference for people who make products: designers, front-end engineers, researchers and the leads who bring them together. Every talk is practical, every workshop is hands-on.</p>
+            </div>
+            <div class="stats reveal">
+                <div class="stat"><strong data-count="2">2</strong><span>days in Lisbon</span></div>
+                <div class="stat"><strong data-count="32">32</strong><span>speakers</span></div>
+                <div class="stat"><strong data-count="1200" data-format="comma">1,200</strong><span>attendees</span></div>
+                <div class="stat"><strong data-count="12">12</strong><span>workshops</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPEAKERS -->
+    <section class="sec" id="speakers">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <span class="eyebrow">Speakers</span>
+                <h2>Learn from people who ship.</h2>
+                <p>A first look at this year's line-up. More speakers announced every two weeks.</p>
+            </div>
+            <div class="speakers">
+                <article class="speaker reveal-item">
+                    <div class="avatar" style="background:linear-gradient(135deg,#b6acff,#8b7bff)">MO</div>
+                    <h3>Maya Okafor</h3><p class="role">Design Director, Northlane</p>
+                    <p class="talk"><small>Keynote</small>Designing for the next billion screens</p>
+                </article>
+                <article class="speaker reveal-item">
+                    <div class="avatar" style="background:linear-gradient(135deg,#7fe7f7,#3ad7f0)">TR</div>
+                    <h3>Tomás Ribeiro</h3><p class="role">Founder, Kiln Studio</p>
+                    <p class="talk"><small>Talk</small>Small teams, big products</p>
+                </article>
+                <article class="speaker reveal-item">
+                    <div class="avatar" style="background:linear-gradient(135deg,#f9a8e4,#f472d0)">HS</div>
+                    <h3>Hana Sato</h3><p class="role">Principal Engineer, Fieldnote</p>
+                    <p class="talk"><small>Talk</small>Design systems that survive contact with code</p>
+                </article>
+                <article class="speaker reveal-item">
+                    <div class="avatar" style="background:linear-gradient(135deg,#c4b5fd,#3ad7f0)">LM</div>
+                    <h3>Lucas Meyer</h3><p class="role">Head of Product, Parcel</p>
+                    <p class="talk"><small>Talk</small>What we learned killing our best feature</p>
+                </article>
+                <article class="speaker reveal-item">
+                    <div class="avatar" style="background:linear-gradient(135deg,#fcd34d,#f472d0)">AD</div>
+                    <h3>Amara Diallo</h3><p class="role">Creative Technologist, Halcyon</p>
+                    <p class="talk"><small>Workshop</small>Prototyping motion in the browser</p>
+                </article>
+                <article class="speaker reveal-item">
+                    <div class="avatar" style="background:linear-gradient(135deg,#8b7bff,#f472d0)">EP</div>
+                    <h3>Elena Petrova</h3><p class="role">Type Designer, Margin Foundry</p>
+                    <p class="talk"><small>Talk</small>Type that reads well at every size</p>
+                </article>
+                <article class="speaker reveal-item">
+                    <div class="avatar" style="background:linear-gradient(135deg,#3ad7f0,#4ade80)">DK</div>
+                    <h3>Daniel Kim</h3><p class="role">Motion Lead, Orbit</p>
+                    <p class="talk"><small>Workshop</small>Motion that explains, not decorates</p>
+                </article>
+                <article class="speaker reveal-item">
+                    <div class="avatar" style="background:linear-gradient(135deg,#f472d0,#fcd34d)">SM</div>
+                    <h3>Sofia Marín</h3><p class="role">Accessibility Lead, Openwork</p>
+                    <p class="talk"><small>Keynote</small>Accessible by default, not by audit</p>
+                </article>
+            </div>
+            <div class="hero-actions reveal" style="margin-top:36px">
+                <a href="register.html" class="btn btn-primary">Reserve your seat <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="sec" id="schedule">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <span class="eyebrow">Schedule</span>
+                <h2>Two days, one track.</h2>
+                <p>No clashing sessions and no FOMO. Workshops run in the afternoon and are booked with your ticket.</p>
+            </div>
+            <div class="day-tabs" role="tablist" aria-label="Conference days">
+                <span class="tab-ind" aria-hidden="true"></span>
+                <button class="day-tab" role="tab" id="t1" aria-controls="d1" aria-selected="true">Day 1 · Thu 22</button>
+                <button class="day-tab" role="tab" id="t2" aria-controls="d2" aria-selected="false" tabindex="-1">Day 2 · Fri 23</button>
+            </div>
+
+            <ol class="agenda" id="d1" role="tabpanel" aria-labelledby="t1">
+                <li class="session"><time>09:00</time><div><h3>Registration &amp; coffee</h3><p>Pick up your badge, meet the room. Pastéis de nata on us.</p></div><span class="tag">Lobby</span></li>
+                <li class="session"><time>10:00</time><div><h3>Designing for the next billion screens</h3><p>Maya Okafor on building products for people whose first computer is a cheap phone on a slow network.</p></div><span class="tag keynote">Keynote</span></li>
+                <li class="session"><time>11:00</time><div><h3>Design systems that survive contact with code</h3><p>Hana Sato on the tokens, naming and review habits that keep a system alive after launch day.</p></div><span class="tag">Talk</span></li>
+                <li class="session"><time>12:00</time><div><h3>Small teams, big products</h3><p>Tomás Ribeiro on shipping a product used by millions with a team of seven.</p></div><span class="tag">Talk</span></li>
+                <li class="session"><time>14:00</time><div><h3>Prototyping motion in the browser</h3><p>Hands-on with Amara Diallo: build interactions you can test with real users the same afternoon.</p></div><span class="tag workshop">Workshop</span></li>
+                <li class="session"><time>18:30</time><div><h3>Riverside opening party</h3><p>Drinks, music and the sunset over the Tagus, right outside the hall.</p></div><span class="tag">Terrace</span></li>
+            </ol>
+
+            <ol class="agenda" id="d2" role="tabpanel" aria-labelledby="t2" hidden>
+                <li class="session"><time>09:30</time><div><h3>Doors &amp; breakfast</h3><p>Coffee, fruit and a quieter morning after the party.</p></div><span class="tag">Lobby</span></li>
+                <li class="session"><time>10:00</time><div><h3>Accessible by default, not by audit</h3><p>Sofia Marín on moving accessibility from the end of the project to the first sketch.</p></div><span class="tag keynote">Keynote</span></li>
+                <li class="session"><time>11:00</time><div><h3>Type that reads well at every size</h3><p>Elena Petrova on choosing and tuning type for screens from watches to billboards.</p></div><span class="tag">Talk</span></li>
+                <li class="session"><time>12:00</time><div><h3>What we learned killing our best feature</h3><p>Lucas Meyer on the data, the arguments and the surprising results.</p></div><span class="tag">Talk</span></li>
+                <li class="session"><time>14:00</time><div><h3>Motion that explains, not decorates</h3><p>A workshop with Daniel Kim on timing, easing and when to leave animation out.</p></div><span class="tag workshop">Workshop</span></li>
+                <li class="session"><time>17:00</time><div><h3>Closing panel &amp; farewell</h3><p>All keynote speakers on what to build next, followed by a goodbye drink.</p></div><span class="tag">Main stage</span></li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- TICKETS -->
+    <section class="sec" id="tickets">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <span class="eyebrow">Tickets</span>
+                <h2>Pick your pass.</h2>
+                <p>All in-person passes include lunch, coffee and the opening party. Prices include VAT.</p>
+                <span class="deadline"><i aria-hidden="true"></i>Early-bird prices end 31 January 2027, 23:59 Lisbon time</span>
+            </div>
+            <div class="tiers">
+                <article class="tier reveal-item">
+                    <h3>Online</h3><p class="desc">Watch from anywhere</p>
+                    <div class="price"><strong>€49</strong></div><p class="price-note">One-time payment</p>
+                    <ul>
+                        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Live stream of every talk</li>
+                        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Recordings for 12 months</li>
+                        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Speaker Q&amp;A chat</li>
+                    </ul>
+                    <a href="register.html?tier=online" class="btn btn-ghost">Choose Online</a>
+                </article>
+                <article class="tier featured reveal-item">
+                    <span class="badge">Most popular</span>
+                    <h3>Standard</h3><p class="desc">The full in-person experience</p>
+                    <div class="price"><strong>€290</strong><s>€390</s></div><p class="price-note">Early-bird price</p>
+                    <ul>
+                        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Both conference days</li>
+                        <li><svg aria-hidden="true"><use href="#i-check"/></svg>One workshop of your choice</li>
+                        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Lunch, coffee &amp; opening party</li>
+                        <li><svg aria-hidden="true"><use href="#i-check"/></svg>All recordings</li>
+                    </ul>
+                    <a href="register.html?tier=standard" class="btn btn-primary">Choose Standard <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                </article>
+                <article class="tier reveal-item">
+                    <h3>VIP</h3><p class="desc">For leads and teams</p>
+                    <div class="price"><strong>€590</strong></div><p class="price-note">Limited to 60 passes</p>
+                    <ul>
+                        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Everything in Standard</li>
+                        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Both workshops</li>
+                        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Reserved front-row seating</li>
+                        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Speakers' dinner on Day 1</li>
+                    </ul>
+                    <a href="register.html?tier=vip" class="btn btn-ghost">Choose VIP</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENUE -->
+    <section class="sec" id="venue">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <span class="eyebrow">Venue</span>
+                <h2>A former warehouse on the river.</h2>
+                <p>Pier Hall 7 is a restored 1920s warehouse on the Lisbon waterfront, ten minutes from the city centre.</p>
+            </div>
+            <div class="venue">
+                <div class="venue-info">
+                    <div class="info-row reveal-item"><svg aria-hidden="true"><use href="#i-pin"/></svg><div><strong>Pier Hall 7</strong><span>Waterfront Quay 7, Lisbon</span></div></div>
+                    <div class="info-row reveal-item"><svg aria-hidden="true"><use href="#i-train"/></svg><div><strong>By train or tram</strong><span>Riverside station is a 4-minute walk; tram 15 stops outside</span></div></div>
+                    <div class="info-row reveal-item"><svg aria-hidden="true"><use href="#i-plane"/></svg><div><strong>From the airport</strong><span>About 25 minutes by metro, 20 by taxi</span></div></div>
+                    <div class="info-row reveal-item"><svg aria-hidden="true"><use href="#i-access"/></svg><div><strong>Accessibility</strong><span>Step-free throughout, live captions on the main stage, quiet room available</span></div></div>
+                </div>
+                <div class="venue-visual reveal" role="img" aria-label="Stylised map showing Pier Hall 7 on the waterfront next to the train station">
+                    <svg viewBox="0 0 520 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="river" x1="0" x2="1"><stop offset="0" stop-color="#3ad7f0" stop-opacity="0.35"/><stop offset="1" stop-color="#8b7bff" stop-opacity="0.35"/></linearGradient>
+                            <radialGradient id="glow"><stop offset="0" stop-color="#8b7bff" stop-opacity="0.9"/><stop offset="1" stop-color="#8b7bff" stop-opacity="0"/></radialGradient>
+                        </defs>
+                        <path d="M-20 300 C 120 260, 220 330, 340 290 S 520 250, 560 270 L560 400 L-20 400 Z" fill="url(#river)"/>
+                        <g stroke="rgba(255,255,255,0.12)" stroke-width="1.5" fill="none">
+                            <path d="M0 80 H520M0 150 H520M0 215 H520M70 0 V260M180 0 V275M300 0 V285M420 0 V265"/>
+                        </g>
+                        <path d="M0 238 H520" stroke="rgba(58,215,240,0.6)" stroke-width="3" stroke-dasharray="8 7"/>
+                        <circle cx="120" cy="238" r="7" fill="#0b0b1a" stroke="#3ad7f0" stroke-width="3"/>
+                        <text x="96" y="226" fill="#a3a8c7" font-family="Geist, sans-serif" font-size="12" font-weight="600">Riverside stn</text>
+                        <circle cx="300" cy="215" r="70" fill="url(#glow)"/>
+                        <circle cx="300" cy="215" r="10" fill="#fff"/>
+                        <circle cx="300" cy="215" r="20" fill="none" stroke="#fff" stroke-opacity="0.5" stroke-width="2" class="ping"/>
+                        <text x="322" y="205" fill="#eef0ff" font-family="Geist, sans-serif" font-size="15" font-weight="700">Pier Hall 7</text>
+                        <text x="322" y="224" fill="#a3a8c7" font-family="Geist, sans-serif" font-size="12">Waterfront Quay 7</text>
+                        <text x="40" y="350" fill="#eef0ff" fill-opacity="0.55" font-family="Geist, sans-serif" font-size="13" font-weight="600" letter-spacing="3">TAGUS RIVER</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="sec" id="faq">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <span class="eyebrow">FAQ</span>
+                <h2>Questions, answered.</h2>
+            </div>
+            <div class="faq">
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a1" id="q1">Can I get a refund?<span class="ic" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></button>
+                    <div class="faq-a" id="a1" role="region" aria-labelledby="q1"><p>Yes — full refunds until 1 March 2027. After that you can transfer your ticket to a colleague for free at any time.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a2" id="q2">How do workshops work?<span class="ic" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></button>
+                    <div class="faq-a" id="a2" role="region" aria-labelledby="q2"><p>Standard passes include one workshop and VIP includes both. You choose when you register, and you can switch until two weeks before the event if places are free.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a3" id="q3">Are there student or team discounts?<span class="ic" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></button>
+                    <div class="faq-a" id="a3" role="region" aria-labelledby="q3"><p>Students get 50% off Standard with a valid student email. Teams of five or more save 15% automatically at checkout.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a4" id="q4">Will talks be recorded?<span class="ic" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></button>
+                    <div class="faq-a" id="a4" role="region" aria-labelledby="q4"><p>Every main-stage talk is recorded and captioned. Recordings go to all ticket holders within a week. Workshops are not recorded.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a5" id="q5">Is the venue accessible?<span class="ic" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></button>
+                    <div class="faq-a" id="a5" role="region" aria-labelledby="q5"><p>Pier Hall 7 is step-free throughout with accessible toilets on every floor. The main stage has live captions, and there's a quiet room for when you need a break. Tell us about any other needs when you register.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final reveal">
+        <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+        <h2>See you in Lisbon this April.</h2>
+        <p>Early-bird Standard passes are €290 until 31 January. Registration takes about two minutes.</p>
+        <div class="hero-actions">
+            <a href="register.html" class="btn btn-primary btn-lg">Get your ticket <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="wrap foot">
+    <span>Sample project — Forma 27 is a fictional event. Designed &amp; built by WebLivo.</span>
+    <a href="/">← Back to WebLivo</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
